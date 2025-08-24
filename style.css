@@ -100,7 +100,6 @@ h1 {
 
 .discord-embed {
   width: 100%; /* Fill the available column space */
-  max-width: 700px; /* But don't exceed your desired max size */
   height: auto;
   border-radius: 8px;
   border: 2px solid #f8d7da;
