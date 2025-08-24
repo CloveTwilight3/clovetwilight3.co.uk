@@ -49,7 +49,8 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 95vw; /* Use 95% of viewport width */
+  width: 100%;
   padding: 2rem;
   backdrop-filter: blur(6px);
 }
@@ -82,10 +83,13 @@ h1 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 2fr 1fr; /* Discord gets 2/3, links get 1/3 */
+  gap: 3rem; /* Bigger gap for wider screens */
   align-items: start;
   margin-bottom: 2rem;
+  max-width: 1400px; /* Optional: set a reasonable max limit */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .discord-section h3 {
@@ -95,7 +99,8 @@ h1 {
 }
 
 .discord-embed {
-  max-width: 100%;
+  width: 100%; /* Fill the available column space */
+  max-width: 700px; /* But don't exceed your desired max size */
   height: auto;
   border-radius: 8px;
   border: 2px solid #f8d7da;
@@ -133,6 +138,7 @@ footer {
   .content-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+    max-width: 100%;
   }
   
   .discord-section {
@@ -145,5 +151,9 @@ footer {
   
   .container {
     max-width: 90%;
+  }
+  
+  .discord-embed {
+    max-width: 100%;
   }
 }
