@@ -80,6 +80,27 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.discord-section h3 {
+  color: #f8d7da;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.discord-embed {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #f8d7da;
+}
+
 .links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -105,4 +126,24 @@ footer {
   margin-top: 2rem;
   font-size: 0.8rem;
   opacity: 0.8;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .discord-section {
+    order: 2; /* This moves Discord to the bottom on mobile */
+  }
+  
+  .links {
+    order: 1; /* This keeps links at the top on mobile */
+  }
+  
+  .container {
+    max-width: 90%;
+  }
 }
