@@ -99,10 +99,10 @@ h1 {
 }
 
 .discord-embed {
+  max-width: 1000px;
   width: 100%; /* Fill the available column space */
   height: auto;
   border-radius: 8px;
-  border: 2px solid #f8d7da;
 }
 
 .links {
